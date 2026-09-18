@@ -31,7 +31,7 @@ function WelcomeBar({ user, totalHits, onLogout }) {
               <strong className="welcome-hits-number">{totalHits}</strong>
             </span>
           </div>
-          <button type="button" className="welcome-logout" onClick={onLogout}>Logout</button>
+          {/*<button type="button" className="welcome-logout" onClick={onLogout}>Logout</button>*/}
         </div>
       </div>
     </div>
@@ -130,7 +130,7 @@ function App() {
   }
   return (
     <Router>
-      <WelcomeBar user={user} totalHits={totalHits} onLogout={handleLogout} />
+      {<WelcomeBar user={user} totalHits={totalHits} onLogout={handleLogout} />}
       <Routes>
         <Route path="/" element={<StoreList />} />
         <Route path="/rate/:slug" element={<RateStore />} />
