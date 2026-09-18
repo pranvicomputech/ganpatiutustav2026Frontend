@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { API_URL } from '../API'
 
-const ENABLE_RATE_BUTTON = false
+const ENABLE_RATE_BUTTON = true
 
 function StoreList() {
   const [stores, setStores] = useState([])
@@ -298,8 +298,8 @@ function StoreList() {
             <button
               type="button"
               className={`btn sort-button ${sortBy === 'nearby'
-                  ? 'btn-warning'
-                  : 'btn-outline-warning'
+                ? 'btn-warning'
+                : 'btn-outline-warning'
                 }`}
               onClick={() => setSortBy('nearby')}
             >
@@ -309,8 +309,8 @@ function StoreList() {
             <button
               type="button"
               className={`btn sort-button ${sortBy === 'rating'
-                  ? 'btn-warning'
-                  : 'btn-outline-warning'
+                ? 'btn-warning'
+                : 'btn-outline-warning'
                 }`}
               onClick={() => setSortBy('rating')}
             >
